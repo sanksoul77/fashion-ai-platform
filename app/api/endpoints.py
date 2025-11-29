@@ -6,6 +6,9 @@ import json
 
 router = APIRouter()
 
+@router.get("/test")
+def test_api():
+    return {"code": 200, "data": "测试接口正常"}
 
 @router.post("/ai-design")
 async def create_ai_design(
